@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				179,
+				30
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "majin left"
+		},
+		{
+			"offsets": [
+				-57,
+				26
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "majin down"
+		},
+		{
+			"offsets": [
+				-48,
+				18
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "majin up"
+		},
+		{
+			"offsets": [
+				-10,
+				12
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "majin right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "majin idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/majinn",
+	"position": [
+		-180,
+		-100
+	],
+	"healthicon": "majin",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		128
+	],
+	"camera_position": [
+		20,
+		130
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}
