@@ -1701,6 +1701,10 @@ class PlayState extends MusicBeatState
 			scripts.update(elapsed);
 		}
 	
+		#if debug//yeah
+		if (FlxG.keys.justPressed.SIX) cpuControlled = true;//bot pay
+		#end
+
 		var charAnimOffsetX:Float = 0;
 		var charAnimOffsetY:Float = 0;
 		if(useDirectionalCamera){
