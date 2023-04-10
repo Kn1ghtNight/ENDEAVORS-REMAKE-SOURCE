@@ -2580,6 +2580,7 @@ class PlayState extends MusicBeatState
 				CustomFadeTransition.nextCamera = null;
 			}
 			MusicBeatState.switchState(new MainMenuState());
+			Lib.application.window.title = "Friday Night Funkin: FANMADE ENDEAVORS";
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			changedDifficulty = false;
 		}
@@ -3401,8 +3402,22 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(frontpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
 			FlxTween.tween(backpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
 			FlxTween.tween(floor, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+			Lib.application.window.title = "FUN IS INFINITE - SEGA ENTERPRISES";
 		}
 
+		if (curStep == 1910)
+		{
+			remove(bush);
+			bush.destroy();
+			remove(sky);
+			sky.destroy();
+			remove(frontpillar);
+			frontpillar.destroy();
+			remove(backpillar);
+			backpillar.destroy();
+			remove(floor);
+			floor.destroy();
+		}
 		// ! CODE AFTER HERE STUPID LUNAR
 
 		// THANKS :)) - LUNAR
