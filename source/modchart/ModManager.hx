@@ -9,13 +9,17 @@ import math.Vector3;
 import modchart.Modifier.ModifierType;
 import modchart.modifiers.*;
 import modchart.events.*;
+import states.game.PlayState;
+import objects.StrumNote;
+import objects.Note;
+import util.CoolUtil;
 
 // Weird amalgamation of Schmovin' modifier system, Andromeda modifier system and my own new shit -neb
 
 class ModManager {
 	public function registerDefaultModifiers()
 	{
-		var quickRegs:Array<Any> = [FlipModifier, ReverseModifier, InvertModifier, DrunkModifier, BeatModifier, AlphaModifier, ScaleModifier, ConfusionModifier, OpponentModifier, TransformModifier, InfinitePathModifier, PerspectiveModifier];
+		var quickRegs:Array<Any> = [FlipModifier, ReverseModifier, InvertModifier, DrunkModifier, BeatModifier, AlphaModifier, ScaleModifier, ConfusionModifier, OpponentModifier, TransformModifier, PerspectiveModifier, InfinitePathModifier];
 		for (mod in quickRegs)
 			quickRegister(Type.createInstance(mod, [this]));
 

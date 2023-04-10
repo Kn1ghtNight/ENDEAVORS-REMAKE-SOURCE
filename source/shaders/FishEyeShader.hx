@@ -1,54 +1,99 @@
 package shaders;
 
+// i think https://www.shadertoy.com/view/wtBXRz
+// i dont remember the exact shader I based this on -neb
+
 import flixel.system.FlxAssets.FlxShader;
 
-class FishEyeShader extends FlxShader // https://www.shadertoy.com/view/WsVSzV
+class FishEyeEffect
 {
-		@:glFragmentSource('        
-        #pragma header
-        vec2 uv = openfl_TextureCoordv.xy;
-        vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
-        vec2 iResolution = openfl_TextureSize;
-        #define iChannel0 bitmap
+	public var shader:FishEyeShader = new FishEyeShader();
 
-        vec3 checker(vec2 uv){
-             return vec3(abs(floor(mod(uv.x*10.,2.))-floor(mod(uv.y*10.,2.))));   
-        }
-        
-        void main()
-        {
-            vec2 uv = fragCoord.xy*2. / iResolution.xy-vec2(1.);
-            
-            //------------------------------------------------
-            // To use in Godot, port this section:
-            //------------------------------------------------
-            
-            // I picked these somewhat arbitrarily
-            const float BARREL = -1.0;
-            const float PINCUSHION = 0.0001;
-            
-            float effect = PINCUSHION; // Set effect to either BARREL or PINCUSHION
-            float effect_scale = 1.0;  // Play with this to slightly vary the results
-            
-            /// Fisheye Distortion ///
-            float d=length(uv);
-            float z = sqrt(1.0 + d * d * effect);
-            float r = atan(d, z) / 3.14159;
-            r *= effect_scale;
-            float phi = atan(uv.y, uv.x);
-            
-            uv = vec2(r*cos(phi)+.5,r*sin(phi)+.5);
-            
-            //------------------------------------------------
-            // end relevant logic
-            //------------------------------------------------
-            
-            gl_fragColor = vec4(checker(uv),1.);
-        }
-		')
+	@:isVar
+	public var fisheyeDistortion1(get, set):Float = 0;
+	@:isVar
+	public var fisheyeDistortion2(get, set):Float = 0;
 
+	function get_fisheyeDistortion1()
+		return shader.fisheyeDistortion1;
+
+	function set_fisheyeDistortion1(val:Float)
+		return shader.fisheyeDistortion1 = val;
+
+	function get_fisheyeDistortion2()
+		return shader.fisheyeDistortion2;
+
+	function set_fisheyeDistortion2(val:Float)
+		return shader.fisheyeDistortion2 = val;
+    
 	public function new()
 	{
-		super();
+		shader.fisheyeDistortion1  = 0;
+		shader.fisheyeDistortion2 = 0;
 	}
+
+
+}
+class FishEyeShader extends FlxShader {
+	@:isVar
+	public var fisheyeDistortion1(get, set):Float = 0;
+	@:isVar
+	public var fisheyeDistortion2(get, set):Float = 0;
+
+
+	function get_fisheyeDistortion1()
+		return dis1.value[0];
+	
+
+	function set_fisheyeDistortion1(val:Float)
+		return dis1.value[0] = val;
+	
+
+	function get_fisheyeDistortion2()
+		return dis2.value[0];
+	
+	function set_fisheyeDistortion2(val:Float)
+		return dis2.value[0] = val;
+	
+
+    @:glFragmentSource('
+        #pragma header
+        const float PI_F = 3.141592653589793;
+        uniform float dis1;
+        uniform float dis2;
+        vec2 brownConradyDistortion(vec2 uv)
+        {
+            // positive values of K1 give barrel distortion, negative give pincushion
+            float r2 = uv.x*uv.x + uv.y*uv.y;
+            uv *= 1.0 + dis1 * r2 + dis2 * r2 * r2;
+            
+            // tangential distortion (due to off center lens elements)
+            // is not modeled in this function, but if it was, the terms would go here
+            return uv;
+        }
+
+        void main()
+        {
+            vec2 unmodifiedUv = openfl_TextureCoordv;
+            vec2 uv = openfl_TextureCoordv;
+            uv -= .5;
+
+            uv = brownConradyDistortion(uv);
+
+            uv += .5;
+
+            if(uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0){
+                gl_FragColor = vec4(0.0);
+                return;
+            }
+            
+            gl_FragColor = flixel_texture2D(bitmap, uv);
+        }
+
+    ')
+    public function new() {
+        super();
+		dis1.value = [0.0];
+		dis2.value = [0.0];
+    }
 }

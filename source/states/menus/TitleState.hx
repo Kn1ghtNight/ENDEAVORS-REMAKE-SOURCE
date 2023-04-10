@@ -46,6 +46,7 @@ import states.*;
 import sys.FileSystem;
 import sys.io.File;
 import util.CoolUtil;
+import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 
@@ -120,8 +121,9 @@ class TitleState extends MusicBeatState
 
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite();
-		bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		var bg:FlxBackdrop = new FlxBackdrop(Paths.image('majinbg'), XY, 0, 0);
+		bg.scrollFactor.set(1, 1);
+		bg.velocity.set(200, 200);
 		add(bg);
 
 		logoBl = new FlxSprite(-150, -100);
@@ -131,6 +133,7 @@ class TitleState extends MusicBeatState
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
+		logoBl.screenCenter();
 
 		swagShader = new ColorSwap();
 		gfDance = new FlxSprite(512, 40);
@@ -140,12 +143,12 @@ class TitleState extends MusicBeatState
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 
-		add(gfDance);
+		//add(gfDance);
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		logoBl.shader = swagShader.shader;
 
-		titleText = new FlxSprite(100, 576);
+		titleText = new FlxSprite(120, 576);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		var animFrames:Array<FlxFrame> = [];
 		@:privateAccess {
@@ -171,7 +174,7 @@ class TitleState extends MusicBeatState
 		titleText.antialiasing = ClientPrefs.globalAntialiasing;
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
-		// titleText.screenCenter(X);
+		//titleText.screenCenter(X);
 		add(titleText);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));

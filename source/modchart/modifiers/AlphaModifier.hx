@@ -5,6 +5,11 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxMath;
 import math.*;
 import flixel.FlxG;
+import objects.*;
+import util.CoolUtil;
+import song.Conductor;
+import states.game.PlayState;
+
 class AlphaModifier extends NoteModifier {
 	override function getName()
 		return 'stealth';

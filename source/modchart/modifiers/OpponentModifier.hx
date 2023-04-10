@@ -5,6 +5,7 @@ import modchart.*;
 import flixel.math.FlxPoint;
 import flixel.math.FlxMath;
 import math.*;
+import util.CoolUtil;
 
 class OpponentModifier extends NoteModifier {
 	override function getName()

@@ -7,6 +7,8 @@ import flixel.math.FlxMath;
 import flixel.FlxG;
 import math.Vector3;
 import math.*;
+import objects.Note;
+import util.CoolUtil;
 
 class LocalRotateModifier extends NoteModifier { // this'll be rotateX in ModManager
 	override function getName()

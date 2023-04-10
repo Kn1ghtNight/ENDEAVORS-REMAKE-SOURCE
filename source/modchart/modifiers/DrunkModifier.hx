@@ -6,6 +6,11 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxMath;
 import flixel.FlxG;
 import math.*;
+import states.game.PlayState;
+import objects.StrumNote;
+import objects.Note;
+import util.CoolUtil;
+import song.Conductor;
 
 class DrunkModifier extends NoteModifier {
     override function getName()return 'drunk';

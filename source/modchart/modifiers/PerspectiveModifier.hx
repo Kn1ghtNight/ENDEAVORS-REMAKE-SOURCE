@@ -8,6 +8,10 @@ import flixel.math.FlxMath;
 import flixel.FlxG;
 using StringTools;
 import math.*;
+import states.game.PlayState;
+import objects.StrumNote;
+import objects.Note;
+import util.CoolUtil;
 // NOTE: THIS SHOULDNT HAVE ITS PERCENTAGE MODIFIED
 // THIS IS JUST HERE TO ALLOW OTHER MODIFIERS TO HAVE PERSPECTIVE
 

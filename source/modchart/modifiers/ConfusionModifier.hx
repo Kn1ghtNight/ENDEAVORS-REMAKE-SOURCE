@@ -4,6 +4,10 @@ import modchart.*;
 import flixel.math.FlxPoint;
 import flixel.math.FlxMath;
 import math.*;
+import states.game.PlayState;
+import objects.StrumNote;
+import objects.Note;
+import util.CoolUtil;
 
 class ConfusionModifier extends NoteModifier {
     override function getName()return 'confusion';

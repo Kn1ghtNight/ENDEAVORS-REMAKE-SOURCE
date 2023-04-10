@@ -9,6 +9,10 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxMath;
 using StringTools;
 import math.*;
+import objects.Note;
+import states.game.PlayState;
+import util.CoolUtil;
+import data.ClientPrefs;
 
 class ReverseModifier extends NoteModifier {
 	inline function lerp(a:Float, b:Float, c:Float)

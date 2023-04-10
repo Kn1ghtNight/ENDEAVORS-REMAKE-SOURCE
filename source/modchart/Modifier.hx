@@ -4,6 +4,8 @@ package modchart;
 
 import flixel.FlxSprite;
 import math.Vector3;
+import objects.StrumNote;
+import objects.Note;
 // Based on Schmovin' and Andromeda's modifier systems
 
 enum ModifierType {

@@ -7,6 +7,7 @@ import flixel.math.FlxMath;
 import flixel.FlxG;
 import math.Vector3;
 import math.*;
+import objects.Note;
 
 typedef PathInfo = {
   var position:Vector3;

@@ -23,6 +23,8 @@ import lime.app.Application;
 import states.editors.MasterEditorMenu;
 import states.options.OptionsState;
 import util.CoolUtil;
+import states.game.PlayState;
+import song.Song;
 
 using StringTools;
 
@@ -34,7 +36,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 
-	var optionShit:Array<String> = ['story_mode', 'freeplay', 'credits', 'options'];
+	var optionShit:Array<String> = ['story_mode', 'options'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -195,11 +197,10 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										MusicBeatState.switchState(new StoryMenuState());
-									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
+										PlayState.SONG = Song.loadFromJson('endeavors', 'endeavors');
+										PlayState.isStoryMode = false;
+										PlayState.storyDifficulty = 0;
+										LoadingState.loadAndSwitchState(new PlayState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new OptionsState());
 								}

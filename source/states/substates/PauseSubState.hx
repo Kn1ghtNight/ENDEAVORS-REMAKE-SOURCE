@@ -21,7 +21,7 @@ import objects.*;
 import song.Conductor;
 import song.Song;
 import states.game.PlayState;
-import states.menus.FreeplayState;
+import states.menus.MainMenuState;
 import states.menus.StoryMenuState;
 import util.CoolUtil;
 
@@ -275,11 +275,11 @@ class PauseSubState extends MusicBeatSubstate
 
 					if (PlayState.isStoryMode)
 					{
-						MusicBeatState.switchState(new StoryMenuState());
+						MusicBeatState.switchState(new MainMenuState());
 					}
 					else
 					{
-						MusicBeatState.switchState(new FreeplayState());
+						MusicBeatState.switchState(new MainMenuState());
 					}
 					PlayState.cancelMusicFadeTween();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));

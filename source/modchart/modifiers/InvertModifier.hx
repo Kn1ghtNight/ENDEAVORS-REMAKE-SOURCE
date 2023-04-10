@@ -2,6 +2,7 @@ package modchart.modifiers;
 
 import flixel.FlxSprite;
 import math.Vector3;
+import objects.Note;
 
 class InvertModifier extends NoteModifier
 {
