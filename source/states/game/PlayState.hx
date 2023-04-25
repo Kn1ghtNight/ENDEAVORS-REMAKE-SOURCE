@@ -560,7 +560,7 @@ class PlayState extends MusicBeatState
 					plantsnshit.alpha = 0;
 
 					redFlash = new FlxSprite(dad.x - 450, dad.y - 450).makeGraphic(FlxG.width * 2 , FlxG.height * 2, FlxColor.RED);
-					redFlash.alpha = 1;
+					redFlash.alpha = 0;
 					redVG = new FlxSprite().loadGraphic(Paths.image('ycrencore/RedVG'));
 					redVG.alpha = 0;
 					redVG.cameras = [camHUD];
@@ -2263,7 +2263,7 @@ class PlayState extends MusicBeatState
 
 				if (dad.animation.curAnim.name == 'laugh')
 				{
-					FlxTween.tween(redFlash, {alpha: 0}, 0.24);
+					FlxTween.tween(redFlash, {alpha: 1}, 0.24);
 					FlxTween.tween(treesfront, {alpha: 0}, 0.24);
 				}
 
