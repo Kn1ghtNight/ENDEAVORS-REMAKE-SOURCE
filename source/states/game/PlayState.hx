@@ -87,7 +87,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 #if VIDEOS_ALLOWED
-import vlc.MP4Handler;
+import hxcodec.VideoHandler;
 #end
 
 class PlayState extends MusicBeatState
@@ -228,6 +228,18 @@ class PlayState extends MusicBeatState
 	var backpillar:FlxSprite;
 	var bush:FlxSprite;
 	var sky:FlxSprite;
+
+	var redFlash:FlxSprite;
+	var skyycr:FlxSprite;
+	var redVG:FlxSprite;
+	var plantsnshit:FlxSprite;
+	var treesfront:FlxSprite;
+	var hills:FlxSprite;
+	var trees:FlxSprite;
+	var backgrass:FlxSprite;
+	var grass:FlxSprite;
+	var flashTween:FlxTween;
+	var treeTween:FlxTween;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -509,6 +521,53 @@ class PlayState extends MusicBeatState
 		{
 			switch (curStage)
 			{
+				case 'ycr-encore':
+					skyycr = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/sky'));
+					skyycr.scrollFactor.set(0.33, 0.33);
+					skyycr.updateHitbox();
+					add(skyycr);
+
+					backgrass = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/GrassBack'));
+					backgrass.scrollFactor.set(0.65, 0.65);
+					backgrass.updateHitbox();
+					add(backgrass);
+
+					trees = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/trees'));
+					trees.scrollFactor.set(0.72, 0.72);
+					trees.updateHitbox();
+					add(trees);
+
+					grass = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/Grass'));
+					grass.updateHitbox();
+					add(grass);
+
+					treesfront = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/TreesFront'));
+					treesfront.updateHitbox();
+
+					hills = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/ENCOREbgPixel'));
+					hills.updateHitbox();
+					hills.antialiasing = false;
+					hills.scale.set(8, 8);
+					hills.alpha = 0;
+					add(hills);
+
+					plantsnshit = new FlxSprite(-600, -200);
+					plantsnshit.frames = Paths.getSparrowAtlas('ycrencore/ENCOREfgPixel');
+					plantsnshit.animation.addByPrefix('plantbop', 'KILLYOURSELF', 24, true);
+					plantsnshit.scale.set(8, 8);
+					plantsnshit.animation.play('plantbop', true);
+					add(plantsnshit);
+					plantsnshit.alpha = 0;
+
+					redFlash = new FlxSprite(dad.x - 450, dad.y - 450).makeGraphic(FlxG.width * 2 , FlxG.height * 2, FlxColor.RED);
+					redFlash.alpha = 1;
+					redVG = new FlxSprite().loadGraphic(Paths.image('ycrencore/RedVG'));
+					redVG.alpha = 0;
+					redVG.cameras = [camHUD];
+					add(redVG);
+
+					FlxTween.tween(redVG, {alpha: 1}, Conductor.stepCrochet / 125, {type: FlxTweenType.PINGPONG});
+
 				case 'majin'://ENDEAVORS:bangbang:
 					var bg:FlxBackdrop = new FlxBackdrop(Paths.image('majin/majinbg'), XY, 0, 0);
 					bg.scrollFactor.set(1, 1);
@@ -522,7 +581,7 @@ class PlayState extends MusicBeatState
 
 					sky = new FlxSprite(-440, -100);
 					sky.frames = Paths.getSparrowAtlas('majin/sky');
-					sky.animation.addByPrefix('skyerr', "sky instance 1", 24, false);
+					sky.animation.addByPrefix('skyerr', "sky instance 1", 24, true);
 					sky.animation.play('skyerr');
 					sky.antialiasing = ClientPrefs.globalAntialiasing;
 					sky.scrollFactor.set(0.33, 0.33);
@@ -586,9 +645,11 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		add(redFlash);
 		add(gfGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
+		if (curStage == 'ycr-encore') add(treesfront);
 
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if (gf != null)
@@ -716,7 +777,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = sacorgBar.y + 25;
 		}
 
-		credBox = new FlxSprite().loadGraphic(Paths.image('creditbox'));
+		credBox = new FlxSprite().loadGraphic(Paths.image('creditbox-' + curStage.toLowerCase()));
 		credBox.y = -720;//lm fao
 		credBox.screenCenter(X);
 		credBox.visible = !ClientPrefs.hideHud;
@@ -912,7 +973,7 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
-		var video:MP4Handler = new MP4Handler();
+		var video:VideoHandler = new VideoHandler();// :3
 		video.playVideo(filepath);
 		video.finishCallback = function()
 		{
@@ -1764,6 +1825,12 @@ class PlayState extends MusicBeatState
 			openChartEditor();
 		}
 
+		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene && curStage.toLowerCase() == 'ycr-encore')//worst code
+		{
+			FlxG.openURL('https://twitter.com');
+			trace("bazinga");
+		}
+
 		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9 * playbackRate), 0, 1));
 		iconP1.scale.set(mult, mult);
 
@@ -2192,6 +2259,12 @@ class PlayState extends MusicBeatState
 				{
 					char.playAnim(value1, true);
 					char.specialAnim = true;
+				}
+
+				if (dad.animation.curAnim.name == 'laugh')
+				{
+					FlxTween.tween(redFlash, {alpha: 0}, 0.24);
+					FlxTween.tween(treesfront, {alpha: 0}, 0.24);
 				}
 
 			case 'Camera Follow Pos':
@@ -3135,6 +3208,7 @@ class PlayState extends MusicBeatState
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
+		if (dad.curCharacter == 'ycr_sonicEncore') health -= 0.005;
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
 		{
 			dad.playAnim('hey', true);
@@ -3394,12 +3468,21 @@ class PlayState extends MusicBeatState
 			});
 		}
 		
-		if (curStep == 16)
+		if (curStep == 16 && curStage == 'majin')
 		{
 			defaultCamZoom = 0.7;
 		}
 
-		if (curStep == 1904)//worst fucking code ever on jod
+		if (curStep > 528 && curSong == 'you-cant-run-encore' && curStep < 784){
+			hills.alpha = 1;
+			plantsnshit.alpha = 1;
+			trees.alpha = 0;
+			skyycr.alpha = 0;
+			backgrass.alpha = 0;
+			treesfront.alpha = 0;
+		}
+
+		if (curStep == 1904 && curStage == 'majin')//worst fucking code ever on jod
 		{
 			FlxTween.tween(bush, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
 			FlxTween.tween(sky, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
@@ -3580,7 +3663,7 @@ class PlayState extends MusicBeatState
 
 			var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 			timeBarBG = new AttachedSprite('timeBar');
-			timeBarBG.setGraphicSize(FlxG.width + 20, 22);
+			timeBarBG.setGraphicSize(FlxG.width + 22, 22);
 			timeBarBG.y = (ClientPrefs.downScroll ? -15 : 695);
 			timeBarBG.scrollFactor.set();
 			timeBarBG.updateHitbox();

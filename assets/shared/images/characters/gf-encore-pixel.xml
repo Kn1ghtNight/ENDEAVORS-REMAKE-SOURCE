@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gf-encore-pixel.png">
+<SubTexture name="gf-encore-pixel idle0000" x="0" y="0" width="35" height="51" frameX="-11" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0001" x="70" y="51" width="35" height="50" frameX="-11" frameY="-7" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0002" x="35" y="0" width="36" height="51" frameX="-11" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0003" x="71" y="0" width="35" height="51" frameX="-12" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0004" x="0" y="51" width="35" height="51" frameX="-12" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0005" x="35" y="51" width="35" height="51" frameX="-13" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0006" x="106" y="0" width="35" height="50" frameX="-13" frameY="-7" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0007" x="35" y="0" width="36" height="51" frameX="-11" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0008" x="71" y="0" width="35" height="51" frameX="-12" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="gf-encore-pixel idle0009" x="0" y="51" width="35" height="51" frameX="-12" frameY="-6" frameWidth="60" frameHeight="60" />
+</TextureAtlas>

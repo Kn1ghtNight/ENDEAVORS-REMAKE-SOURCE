@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="ENCOREbgPixel.png">
+<SubTexture name="dada0000" x="0" y="0" width="525" height="192" frameX="0" frameY="0" frameWidth="525" frameHeight="192" />
+<SubTexture name="dada0001" x="0" y="0" width="525" height="192" frameX="0" frameY="0" frameWidth="525" frameHeight="192" />
+<SubTexture name="dada0002" x="0" y="0" width="525" height="192" frameX="0" frameY="0" frameWidth="525" frameHeight="192" />
+<SubTexture name="dada0003" x="0" y="0" width="525" height="192" frameX="0" frameY="0" frameWidth="525" frameHeight="192" />
+</TextureAtlas>
