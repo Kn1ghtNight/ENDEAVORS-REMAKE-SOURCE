@@ -2,7 +2,10 @@
 	"songs": [
 		["You Cant Run ENCORE", 	"ycr-encore", 		[0, 0, 128]],
 		["Endeavors", 			"majin", 		[0, 0, 128]],
-		["Hellbent", 			"lord x", 		[120, 119, 176]],
+		["Hellbent", 			"soylent", 		[60, 60, 90]],
+		["GODSPEED", 			"exe_phase2", 		[60, 53, 75]],
+		["Fatality", 			"fatal-sonic", 		[220, 28, 36]],
+		["Vista", 			"chaotix", 		[204, 51, 51]],
 		["Last Chance", 		"zalgo", 		[196, 102, 37]]
 	],
 	"hideFreeplay": false,
