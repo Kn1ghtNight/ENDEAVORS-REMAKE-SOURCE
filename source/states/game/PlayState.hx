@@ -223,12 +223,14 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
+	//Endeavors
 	var floor:FlxSprite;
 	var frontpillar:FlxSprite;
 	var backpillar:FlxSprite;
 	var bush:FlxSprite;
 	var sky:FlxSprite;
 
+	//YCR Encore
 	var redFlash:FlxSprite;
 	var skyycr:FlxSprite;
 	var redVG:FlxSprite;
@@ -240,6 +242,21 @@ class PlayState extends MusicBeatState
 	var grass:FlxSprite;
 	var flashTween:FlxTween;
 	var treeTween:FlxTween;
+
+	//GODSPEED
+	var tailsded:FlxSprite;
+	var ground:FlxSprite;
+	var backtrees:FlxSprite;
+	var exeAnimated:FlxSprite;
+	var sky2:FlxSprite;
+	var sun2:FlxSprite;
+	var clouds2:FlxSprite;
+	var mountains2:FlxSprite;
+	var middle_ground2:FlxSprite;
+	var exe_stage2:FlxSprite;
+	var tentacles:FlxSprite;
+	var overlay:FlxSprite;
+	var exePhase2:Bool = false;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -610,6 +627,77 @@ class PlayState extends MusicBeatState
 					add(frontpillar);
 
 					gf.alpha = 0;
+				case 'exeStage':
+					sky = new FlxSprite(-414, -240.8).loadGraphic(Paths.image('exe/sky'));
+					sky.scrollFactor.set(1, 1);
+					sky.scale.set(1.2, 1.2);
+					add(sky);
+
+					backtrees = new FlxSprite(-290.55, -298.3).loadGraphic(Paths.image('exe/backtrees'));
+					backtrees.scrollFactor.set(1.1, 1);
+					backtrees.scale.set(1.2, 1.2);
+					add(backtrees);
+
+					trees = new FlxSprite(-306, -334.65).loadGraphic(Paths.image('exe/trees'));
+					trees.scrollFactor.set(1.2, 1);
+					trees.scale.set(1.2, 1.2);
+					add(trees);
+
+					ground = new FlxSprite(-309.95, -240.2).loadGraphic(Paths.image('exe/ground'));
+					ground.scrollFactor.set(1.3, 1);
+					ground.scale.set(1.2, 1.2);
+					add(ground);
+
+					exeAnimated = new FlxSprite(-409.95, -340.2);
+					exeAnimated.frames = Paths.getSparrowAtlas('exe/ExeAnimatedBG_Assets');
+					exeAnimated.animation.addByPrefix('Animation', "ExeBGAnim", 50, true);
+					exeAnimated.animation.play('Animation');
+					exeAnimated.antialiasing = ClientPrefs.globalAntialiasing;
+					exeAnimated.scrollFactor.set(1, 1);
+					exeAnimated.updateHitbox();
+					add(exeAnimated);
+
+					tailsded = new FlxSprite(700, 500).loadGraphic(Paths.image('exe/TailsCorpse'));
+					add(tailsded);
+
+
+
+					sky2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/Background'));
+					sky2.scrollFactor.set(0.4, 0.4);
+					sky2.scale.set(1.2, 1.2);
+					add(sky2);
+
+					clouds2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/Clouds'));
+					clouds2.scrollFactor.set(0.5, 0.5);
+					clouds2.scale.set(1.2, 1.2);
+					add(clouds2);
+
+					sun2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/blacksun'));
+					sun2.scrollFactor.set(0.5, 0.5);
+					sun2.scale.set(1.2, 1.2);
+					add(sun2);
+
+					mountains2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/Background_Mountains'));
+					mountains2.scrollFactor.set(0.7, 0.7);
+					mountains2.scale.set(1.2, 1.2);
+					add(mountains2);
+
+					middle_ground2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/Middle Ground'));
+					middle_ground2.scrollFactor.set(0.8, 0.8);
+					middle_ground2.scale.set(1.2, 1.2);
+					add(middle_ground2);
+
+					exe_stage2 = new FlxSprite(-609.95, -540.2).loadGraphic(Paths.image('exe/phase2/Stage'));
+					exe_stage2.scrollFactor.set(1, 1);
+					exe_stage2.scale.set(1.2, 1.2);
+					add(exe_stage2);
+
+					sky2.alpha = 0.001;
+					clouds2.alpha = 0.001;
+					sun2.alpha = 0.001;
+					mountains2.alpha = 0.001;
+					middle_ground2.alpha = 0.001;
+					exe_stage2.alpha = 0.001;
 				case 'stage': // Week 1
 					var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
 					bg.scrollFactor.set(0.9, 0.9);
@@ -772,8 +860,7 @@ class PlayState extends MusicBeatState
 		botplayTxt.antialiasing = ClientPrefs.globalAntialiasing;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
-		if (ClientPrefs.downScroll)
-		{
+		if (ClientPrefs.downScroll){
 			botplayTxt.y = sacorgBar.y + 25;
 		}
 
@@ -784,6 +871,22 @@ class PlayState extends MusicBeatState
 		credBox.antialiasing = ClientPrefs.globalAntialiasing;
 		add(credBox);
 
+		if (curStage == 'exeStage'){
+			tentacles = new FlxSprite(-50, 0).loadGraphic(Paths.image('exe/tentacles'));
+			tentacles.scrollFactor.set(0, 0);
+			tentacles.scale.set(1.1, 1);
+			add(tentacles);
+			tentacles.cameras = [camOther];
+
+			overlay = new FlxSprite(-50, 0).loadGraphic(Paths.image('exe/tentacles'));
+			overlay.scrollFactor.set(0, 0);
+			overlay.scale.set(1.1, 1);
+			add(overlay);
+			overlay.cameras = [camOther];
+
+			tentacles.alpha = 0.001;
+			overlay.alpha = 0.001;
+		}
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -868,6 +971,13 @@ class PlayState extends MusicBeatState
 		CustomFadeTransition.nextCamera = camOther;
 
 		scripts.executeAllFunc("createPost");
+
+		if (curStage == 'exeStage'){
+			opponentStrums.members[0].x = -1000;
+			opponentStrums.members[1].x = -1000;
+			opponentStrums.members[2].x = -1000;
+			opponentStrums.members[3].x = -1000;
+		}
 	}
 
 	function set_songSpeed(value:Float):Float
@@ -1757,6 +1867,39 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		if (curStage == 'exeStage'){
+			switch (songMisses){
+				case 0:health = 2;tentacles.alpha = 0.001;
+				case 1:health = 1.8;tentacles.alpha = 0.1;
+				case 2:health = 1.6;tentacles.alpha = 0.2;
+				case 3:health = 1.4;tentacles.alpha = 0.3;
+				case 4:health = 1.2;tentacles.alpha = 0.4;
+				case 5:health = 1;tentacles.alpha = 0.5;
+				case 6:health = 0.8;tentacles.alpha = 0.6;
+				case 7:health = 0.6;tentacles.alpha = 0.7;
+				case 8:health = 0.4;tentacles.alpha = 0.8;
+				case 9:health = 0.2;tentacles.alpha = 0.9;
+				case 10:health -= 100000;tentacles.alpha = 1;
+			}
+			overlay.alpha = tentacles.alpha;
+			if (songMisses >= 7){
+				triggerEventNote('Screen Shake', '0.1', '0.5');
+			}
+			if (exePhase2){
+				if (!SONG.notes[curSection].mustHitSection){
+					defaultCamZoom = 0.55;
+				}else{
+					defaultCamZoom = 0.7;
+				}
+			}else{
+				if (!SONG.notes[curSection].mustHitSection){
+					defaultCamZoom = 0.8;
+				}else{
+					defaultCamZoom = 0.95;
+				}
+			}
+		}
+
 		if (scripts != null)
 		{
 			scripts.update(elapsed);
@@ -2435,6 +2578,11 @@ class PlayState extends MusicBeatState
 						}
 					});
 				}
+			case 'Flash White' | 'White Flash':
+				var length:Float = Std.parseFloat(value1);
+				if (Math.isNaN(length))length = 1;
+
+				camOther.flash(FlxColor.WHITE, length);
 		}
 
 		scripts.executeAllFunc("event", [eventName, value1, value2]);
@@ -3447,63 +3595,69 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
-		if (curStep == lastStepHit)
-		{
+		if (curStep == lastStepHit){
 			return;
 		}
 
-		if (curStep == 1)
-		{
+		if (curStep == 1){
 			FlxTween.tween(credBox, {y: 0}, 0.5, {ease: FlxEase.circOut});
 		}
 
-		if (curStep == 24)
-		{
+		if (curStep == 24){
 			FlxTween.tween(credBox, {y: -720}, 0.5, {ease: FlxEase.circOut,
-				onComplete: function(twn:FlxTween)
-					{
-						credBox.alpha = 0;
-						remove(credBox);
-					}
+				onComplete: function(twn:FlxTween){
+					credBox.alpha = 0;
+					remove(credBox);
+				}
 			});
 		}
 		
-		if (curStep == 16 && curStage == 'majin')
-		{
+		if (curStep == 16 && curStage == 'majin'){
 			defaultCamZoom = 0.7;
 		}
 
-		if (curStep > 528 && curSong == 'you-cant-run-encore' && curStep < 784){
-			hills.alpha = 1;
-			plantsnshit.alpha = 1;
-			trees.alpha = 0;
-			skyycr.alpha = 0;
-			backgrass.alpha = 0;
-			treesfront.alpha = 0;
+		if (curSong == 'you-cant-run-encore'){
+			if (curStep > 528 && curStep < 784){
+				hills.alpha = 1;
+				plantsnshit.alpha = 1;
+				trees.alpha = 0;
+				skyycr.alpha = 0;
+				backgrass.alpha = 0;
+				treesfront.alpha = 0;
+			}
 		}
-
-		if (curStep == 1904 && curStage == 'majin')//worst fucking code ever on jod
-		{
-			FlxTween.tween(bush, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
-			FlxTween.tween(sky, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
-			FlxTween.tween(frontpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
-			FlxTween.tween(backpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
-			FlxTween.tween(floor, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
-			Lib.application.window.title = "FUN IS INFINITE - SEGA ENTERPRISES";
+		if (curStage == 'majin'){//worst fucking code ever on jod
+			if (curStep == 1904){
+				FlxTween.tween(bush, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+				FlxTween.tween(sky, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+				FlxTween.tween(frontpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+				FlxTween.tween(backpillar, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+				FlxTween.tween(floor, {alpha: 0}, 2.0, {ease: FlxEase.quadOut, type: ONESHOT});
+				Lib.application.window.title = "FUN IS INFINITE - SEGA ENTERPRISES";
+			}
+			if (curStep == 1910){
+				remove(bush);
+				bush.destroy();
+				remove(sky);
+				sky.destroy();
+				remove(frontpillar);
+				frontpillar.destroy();
+				remove(backpillar);
+				backpillar.destroy();
+				remove(floor);
+				floor.destroy();
+			}
 		}
-
-		if (curStep == 1910)
-		{
-			remove(bush);
-			bush.destroy();
-			remove(sky);
-			sky.destroy();
-			remove(frontpillar);
-			frontpillar.destroy();
-			remove(backpillar);
-			backpillar.destroy();
-			remove(floor);
-			floor.destroy();
+		if (SONG.song == 'GODSPEED'){
+			if (curStep == 928){
+				exePhase2 = true;
+				sky2.alpha = 1;
+				sun2.alpha = 1;
+				clouds2.alpha = 1;
+				mountains2.alpha = 1;
+				middle_ground2.alpha = 1;
+				exe_stage2.alpha = 1;
+			}
 		}
 		// ! CODE AFTER HERE STUPID LUNAR
 

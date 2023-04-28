@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Ethereal EXE.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Ethereal Down0000" x="0" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0001" x="1088" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0002" x="2176" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0003" x="3264" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0004" x="4352" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0005" x="5440" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0006" x="5440" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0007" x="6528" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0008" x="0" y="0" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0009" x="0" y="816" width="1086" height="814"/>
+	<SubTexture name="Ethereal Down0010" x="1088" y="816" width="1086" height="814"/>
+	<SubTexture name="Ethereal Idle0000" x="2176" y="816" width="309" height="784"/>
+	<SubTexture name="Ethereal Left0000" x="2487" y="816" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0001" x="3644" y="816" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0002" x="4801" y="816" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0003" x="5958" y="816" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0004" x="0" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0005" x="1157" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0006" x="2314" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0007" x="3471" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0008" x="4628" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0009" x="5785" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Left0010" x="6942" y="1748" width="1155" height="930"/>
+	<SubTexture name="Ethereal Right0000" x="0" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0001" x="1065" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0002" x="2130" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0003" x="3195" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0004" x="4260" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0005" x="5325" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0006" x="6390" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0007" x="0" y="3558" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0008" x="0" y="2680" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0009" x="1065" y="3558" width="1063" height="876"/>
+	<SubTexture name="Ethereal Right0010" x="2130" y="3558" width="1063" height="876"/>
+	<SubTexture name="Ethereal Up0000" x="3195" y="3558" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0001" x="4297" y="3558" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0002" x="5399" y="3558" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0003" x="6501" y="3558" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0004" x="0" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0005" x="1102" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0006" x="1102" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0007" x="2204" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0008" x="3306" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0009" x="4408" y="4511" width="1100" height="951"/>
+	<SubTexture name="Ethereal Up0010" x="5510" y="4511" width="1100" height="951"/>
+</TextureAtlas>

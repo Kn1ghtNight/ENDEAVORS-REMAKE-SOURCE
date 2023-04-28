@@ -36,7 +36,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 
-	var optionShit:Array<String> = ['story_mode', 'options'];
+	var optionShit:Array<String> = ['story_mode', 'freeplay', 'options'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -201,6 +201,8 @@ class MainMenuState extends MusicBeatState
 										PlayState.isStoryMode = false;
 										PlayState.storyDifficulty = 0;
 										LoadingState.loadAndSwitchState(new PlayState());
+									case 'freeplay':
+										LoadingState.loadAndSwitchState(new FreeplayState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new OptionsState());
 								}
