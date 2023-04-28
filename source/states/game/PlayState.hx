@@ -1,5 +1,10 @@
 package states.game;
 
+import cpp.CPPWindows;
+import flixel.system.scaleModes.RatioScaleMode;
+import lime.app.Application;
+import flixel.system.scaleModes.StageSizeScaleMode;
+import flixel.addons.display.FlxSpriteAniRot;
 import data.*;
 import data.Paths;
 import data.StageData.StageFile;
@@ -29,6 +34,7 @@ import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
+import flixel.math.FlxRandom;
 import flixel.system.FlxAssets.FlxShader;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
@@ -71,6 +77,8 @@ import states.menus.*;
 import states.substates.*;
 import util.*;
 import modchart.*;
+import PlatformUtil;
+import shaders.FatalityGlitch;
 import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
@@ -174,6 +182,8 @@ class PlayState extends MusicBeatState
 
 	private var curSong:String = "";
 
+	public var elapsedtime:Float = 0;
+
 	public var gfSpeed:Int = 1;
 	public var health:Float = 1;
 	public var combo:Int = 0;
@@ -240,6 +250,22 @@ class PlayState extends MusicBeatState
 	var grass:FlxSprite;
 	var flashTween:FlxTween;
 	var treeTween:FlxTween;
+
+	// fatal error shit
+	var base:FlxSprite;
+	var domain:FlxSprite;
+	var domain2:FlxSprite;
+	var trueFatal:FlxSprite;
+	// mechanic shit + moving funne window for fatal error
+	var windowX:Float = Lib.application.window.x;
+	var windowY:Float = Lib.application.window.y;
+	var Xamount:Float = 0;
+	var Yamount:Float = 0;
+	var IsWindowMoving:Bool = false;
+	var IsWindowMoving2:Bool = false;
+	var errorRandom:FlxRandom = new FlxRandom(666); // so that every time you play the song, the error popups are in the same place
+	// keeps it all nice n fair n shit
+	var glitch:FatalityGlitch;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -521,6 +547,87 @@ class PlayState extends MusicBeatState
 		{
 			switch (curStage)
 			{
+				case 'fatal-error'://and this is where we kept the repo private :3
+				    FlxG.mouse.visible = true;
+				    FlxG.mouse.unload();
+				    FlxG.log.add("Sexy mouse cursor " + Paths.image("fatal_mouse_cursor"));
+				    FlxG.mouse.load(Paths.image("fatal_mouse_cursor").bitmap, 1.5, 0);
+
+				    GameOverSubstate.characterName = 'bf-fatal-death';
+				    GameOverSubstate.deathSoundName = 'fatal-death';
+				    GameOverSubstate.loopSoundName = 'starved-loop';
+					glitch = new shaders.FatalityGlitch();
+					camGame.setFilters([new ShaderFilter(glitch)]);
+
+					base = new FlxSprite(-200, 100);
+					base.frames = Paths.getSparrowAtlas('fatal/launchbase');
+					base.animation.addByIndices('base', 'idle', [0, 1, 2, 3, 4, 5, 6, 8, 9], "", 12, true);
+					// base.animation.addByIndices('lol', 'idle',[8, 9], "", 12);
+					base.animation.play('base');
+					base.scale.x = 5;
+					base.scale.y = 5;
+					base.antialiasing = false;
+					base.scrollFactor.set(1, 1);
+					add(base);
+	
+					domain2 = new FlxSprite(100, 200);
+					domain2.frames = Paths.getSparrowAtlas('fatal/domain2');
+					domain2.animation.addByIndices('theand', 'idle', [0, 1, 2, 3, 4, 5, 6, 8, 9], "", 12, true);
+					domain2.animation.play('theand');
+					domain2.scale.x = 4;
+					domain2.scale.y = 4;
+					domain2.antialiasing = false;
+					domain2.scrollFactor.set(1, 1);
+					domain2.visible = false;
+					add(domain2);
+	
+					domain = new FlxSprite(100, 200);
+					domain.frames = Paths.getSparrowAtlas('fatal/domain');
+					domain.animation.addByIndices('begin', 'idle', [0, 1, 2, 3, 4], "", 12, true);
+					domain.animation.play('begin');
+					domain.scale.x = 4;
+					domain.scale.y = 4;
+					domain.antialiasing = false;
+					domain.scrollFactor.set(1, 1);
+					domain.visible = false;
+					add(domain);
+	
+					trueFatal = new FlxSprite(250, 200);
+					trueFatal.frames = Paths.getSparrowAtlas('fatal/truefatalstage');
+					trueFatal.animation.addByIndices('piss', 'idle', [0, 1, 2, 3], "", 12, true);
+					trueFatal.animation.play('piss');
+					trueFatal.scale.x = 4;
+					trueFatal.scale.y = 4;
+					trueFatal.antialiasing = false;
+					trueFatal.scrollFactor.set(1, 1);
+					trueFatal.visible = false;
+					add(trueFatal);
+	
+					/* var filePath:String = Sys.getCwd();
+					if(filePath.endsWith("/")){
+						filePath = filePath.replace( "/", "");
+					}
+					filePath = filePath.replace( "/", "\\");
+					// filePath = filePath.replace( " ", "\<space>");
+					trace(filePath);
+
+					lime.app.Application.current.window.borderless = true;
+					Sys.command('start "" \"${filePath}\\plugins\\Melt.exe\"');
+
+					if (FlxG.keys.justPressed.NINE) Sys.command('taskkill /IM \"Melt.exe\" /F');*/
+					FlxG.autoPause = false;
+
+					/*trueFatal = new FlxSprite(-175, -50).loadGraphic(BitmapData.fromFile( Sys.getEnv("UserProfile") + "\\AppData\\Roaming\\Microsoft\\Windows\\Themes\\TranscodedWallpaper" ) );
+					var scaleW = trueFatal.width / (FlxG.width / FlxG.camera.zoom);
+					var scaleH = trueFatal.height / (FlxG.height / FlxG.camera.zoom);
+					var scale = scaleW > scaleH ? scaleW : scaleH;
+					trueFatal.scale.x = scale;
+					trueFatal.scale.y = scale;
+					trueFatal.antialiasing=true;
+					trueFatal.scrollFactor.set(0.2, 0.2);
+					trueFatal.visible=false;
+					trueFatal.screenCenter(XY);
+					add(trueFatal);*/
 				case 'ycr-encore':
 					skyycr = new FlxSprite(-600, -200).loadGraphic(Paths.image('ycrencore/sky'));
 					skyycr.scrollFactor.set(0.33, 0.33);
@@ -1754,6 +1861,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
+	public var fataltime:Float = 0;
 
 	override public function update(elapsed:Float)
 	{
@@ -1766,6 +1874,19 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.SIX) cpuControlled = true;//bot pay
 		#end
 
+		if (curStage == 'fatal-error' && ClientPrefs.shaders) glitch.update(elapsed);
+		if (curStage == 'fatal-error')
+		{
+			
+			fataltime += elapsed * 9;
+	
+			var screenwidth = Application.current.window.display.bounds.width;
+			var screenheight = Application.current.window.display.bounds.height;
+	
+			//center
+			Application.current.window.y = Math.round(((screenheight / 2) - (720 / 2)) + (Math.sin((fataltime / 5)) * 60));
+			Application.current.window.x = Math.round(((screenwidth / 2) - (1280 / 2)) + (Math.cos((fataltime / 5)) * 60));
+		}
 		var charAnimOffsetX:Float = 0;
 		var charAnimOffsetY:Float = 0;
 		if(useDirectionalCamera){
@@ -2311,7 +2432,6 @@ class PlayState extends MusicBeatState
 					char.idleSuffix = value2;
 					char.recalculateDanceIdle();
 				}
-
 			case 'Screen Shake':
 				var valuesArray:Array<String> = [value1, value2];
 				var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -2579,6 +2699,11 @@ class PlayState extends MusicBeatState
 		deathCounter = 0;
 		seenCutscene = false;
 
+		Lib.application.window.resizable = true;
+			FlxG.scaleMode = new RatioScaleMode(false);
+			FlxG.resizeGame(1280, 720);
+			FlxG.resizeWindow(1280, 720);
+			
 		if (ScriptUtil.hasPause(scripts.executeAllFunc("endSong")))
 			return;
 
@@ -3209,6 +3334,10 @@ class PlayState extends MusicBeatState
 			camZooming = true;
 
 		if (dad.curCharacter == 'ycr_sonicEncore') health -= 0.005;
+		if (curSong == 'fatality'){
+			var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (9 * playbackRate), 0, 1));
+		    iconP2.scale.set(mult, mult);
+		}
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
 		{
 			dad.playAnim('hey', true);
@@ -3492,7 +3621,7 @@ class PlayState extends MusicBeatState
 			Lib.application.window.title = "FUN IS INFINITE - SEGA ENTERPRISES";
 		}
 
-		if (curStep == 1910)
+		if (curStep == 1910 && curStage == 'majin')
 		{
 			remove(bush);
 			bush.destroy();
@@ -3563,6 +3692,75 @@ class PlayState extends MusicBeatState
 		lastBeatHit = curBeat;
 	}
 
+	function fatalTransistionThing()
+		{
+			base.visible = false;
+			domain.visible = true;
+			domain2.visible = true;
+		}
+	
+		function fatalTransitionStatic()
+		{
+			// placeholder for now, waiting for cool static B) (cool static added)
+			var daStatic = new FlxSprite(0, 0);
+			daStatic.frames = Paths.getSparrowAtlas('statix');
+			daStatic.animation.addByPrefix('staticthing','statix', 24);
+			daStatic.screenCenter();
+			daStatic.setGraphicSize(FlxG.width, FlxG.height);
+			daStatic.cameras = [camHUD];
+			add(daStatic);
+			FlxG.sound.play(Paths.sound('staticBUZZ'));
+			new FlxTimer().start(0.20, function(tmr:FlxTimer)
+			{
+				remove(daStatic);
+			});
+		}
+	
+		function fatalTransistionThingDos()
+		{
+	
+	
+			removeStatics();
+			generateStaticArrows(0);
+			generateStaticArrows(1);
+	
+			domain.visible = false;
+			domain2.visible = false;
+			trueFatal.visible = true;
+	
+			dadGroup.remove(dad);
+			boyfriendGroup.remove(boyfriend);
+			var olddx = dad.x + 740;
+			var olddy = dad.y - 240;
+			dad = new Character(olddx, olddy, 'true-fatal');
+			iconP2.changeIcon(dad.healthIcon);
+	
+			var oldbfx = boyfriend.x - 250;
+			var oldbfy = boyfriend.y + 135;
+			boyfriend = new Boyfriend(oldbfx, oldbfy, 'bf-fatal-small');
+	
+			dadGroup.add(dad);
+			boyfriendGroup.add(boyfriend);
+		}
+
+		function removeStatics()
+			{
+				playerStrums.forEach(function(todel:StrumNote)
+				{
+					playerStrums.remove(todel);
+					todel.destroy();
+				});
+				opponentStrums.forEach(function(todel:StrumNote)
+				{
+					opponentStrums.remove(todel);
+					todel.destroy();
+				});
+				strumLineNotes.forEach(function(todel:StrumNote)
+				{
+					strumLineNotes.remove(todel);
+					todel.destroy();
+				});
+			}
 	override function sectionHit()
 	{
 		super.sectionHit();
