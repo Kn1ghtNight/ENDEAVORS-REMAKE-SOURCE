@@ -58,7 +58,7 @@ class Modcharts {
                     modManager.queueEaseP(step, step + 4, "mini", 0, "quadOut");
                 }
                 modManager.queueEaseP(1152, 1156, 'tipZ', 145);
-                //modManager.queueEaseP(1708, 1712, 'tipZ', 0);
+                modManager.queueEaseP(1708, 1712, 'tipZ', 0);
             case 'endeavors':
 
                 var kicks = [];
