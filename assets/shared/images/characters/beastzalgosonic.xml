@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="beastzalgosonic.png">
+<SubTexture name="beastzalgosonic idle0000" x="189" y="66" width="49" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0001" x="134" y="138" width="50" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0002" x="184" y="138" width="50" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0003" x="250" y="0" width="50" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0004" x="98" y="202" width="50" height="62" frameX="-40" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0005" x="148" y="202" width="48" height="62" frameX="-41" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0006" x="196" y="202" width="48" height="62" frameX="-41" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0007" x="300" y="186" width="46" height="61" frameX="-42" frameY="-35" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0008" x="136" y="265" width="47" height="61" frameX="-42" frameY="-35" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0009" x="244" y="202" width="48" height="62" frameX="-42" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0010" x="300" y="0" width="48" height="62" frameX="-42" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0011" x="300" y="62" width="48" height="62" frameX="-42" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0012" x="300" y="124" width="48" height="62" frameX="-42" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0013" x="250" y="63" width="49" height="63" frameX="-41" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0014" x="250" y="126" width="49" height="63" frameX="-41" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0015" x="0" y="202" width="49" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic idle0016" x="49" y="202" width="49" height="63" frameX="-40" frameY="-33" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic down0000" x="65" y="327" width="67" height="44" frameX="-21" frameY="-52" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic down0001" x="0" y="327" width="65" height="45" frameX="-22" frameY="-51" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic down0002" x="348" y="0" width="63" height="47" frameX="-23" frameY="-49" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic down0003" x="251" y="265" width="63" height="48" frameX="-23" frameY="-48" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic left0000" x="0" y="138" width="71" height="64" frameX="-15" frameY="-32" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic left0001" x="0" y="265" width="68" height="62" frameX="-20" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic left0002" x="183" y="265" width="68" height="61" frameX="-21" frameY="-35" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic left0003" x="68" y="265" width="68" height="62" frameX="-21" frameY="-34" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic up0000" x="0" y="0" width="64" height="72" frameX="-40" frameY="-24" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic up0001" x="64" y="0" width="63" height="68" frameX="-41" frameY="-28" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic up0002" x="0" y="72" width="60" height="66" frameX="-44" frameY="-30" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic up0003" x="60" y="72" width="58" height="66" frameX="-45" frameY="-30" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic right0000" x="71" y="138" width="63" height="64" frameX="-50" frameY="-32" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic right0001" x="118" y="72" width="62" height="66" frameX="-50" frameY="-30" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic right0002" x="189" y="0" width="61" height="66" frameX="-50" frameY="-30" frameWidth="130" frameHeight="130" />
+<SubTexture name="beastzalgosonic right0003" x="127" y="0" width="62" height="67" frameX="-50" frameY="-29" frameWidth="130" frameHeight="130" />
+</TextureAtlas>

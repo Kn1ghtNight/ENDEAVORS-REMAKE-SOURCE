@@ -1,0 +1,129 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "zalgotails left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "zalgotails down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				0
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "zalgotails up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "zalgotails right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 12,
+			"name": "zalgotails altleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 12,
+			"name": "zalgotails altup0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				0
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 12,
+			"name": "zalgotails altright0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				0
+			],
+			"anim": "singDOWN-alt",
+			"fps": 12,
+			"name": "zalgotails altdown0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "zalgotails idle"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/zalgotails",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-165,
+		85
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

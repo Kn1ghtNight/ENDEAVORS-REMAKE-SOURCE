@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "sunshinesonic idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "sunshinesonic left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "sunshinesonic down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				1
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "sunshinesonic up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "sunshinesonic right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singLEFTmiss",
+			"fps": 12,
+			"name": "sunshinesonic mleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				1
+			],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "sunshinesonic mdown0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				1
+			],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "sunshinesonic mup0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				1
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 12,
+			"name": "sunshinesonic mright0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/sunshinesonic",
+	"position": [
+		20,
+		35
+	],
+	"healthicon": "dad",
+	"flip_x": true,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-105,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

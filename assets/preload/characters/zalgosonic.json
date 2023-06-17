@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "zalgosonic idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "zalgosonic left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "zalgosonic down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				0
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "zalgosonic up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "zalgosonic right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				5
+			],
+			"anim": "singLEFT-alt",
+			"fps": 12,
+			"name": "zalgosonic altleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				5
+			],
+			"anim": "singUP-alt",
+			"fps": 12,
+			"name": "zalgosonic altup0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				5
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 12,
+			"name": "zalgosonic altright0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				5
+			],
+			"anim": "singDOWN-alt",
+			"fps": 12,
+			"name": "zalgosonic altdown0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/zalgosonic",
+	"position": [
+		30,
+		25
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-155,
+		95
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,94 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-10,
+				-130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			],
+			"name": "GFIDLE"
+		},
+		{
+			"offsets": [
+				-11,
+				-133
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "GFCHEER"
+		},
+		{
+			"offsets": [
+				-7,
+				-140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "sad",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "GFSAD"
+		},
+		{
+			"offsets": [
+				-34,
+				-128
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "GFSCARED"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/II_GF",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

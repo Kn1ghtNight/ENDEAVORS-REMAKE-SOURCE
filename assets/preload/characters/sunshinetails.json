@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "sunshinetails idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "sunshinetails left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "sunshinetails down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				1
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "sunshinetails up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "sunshinetails right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singLEFTmiss",
+			"fps": 12,
+			"name": "sunshinetails mleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				1
+			],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "sunshinetails mdown0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "sunshinetails mup0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				1
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 12,
+			"name": "sunshinetails mright0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/sunshinetails",
+	"position": [
+		10,
+		35
+	],
+	"healthicon": "dad",
+	"flip_x": true,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-135,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

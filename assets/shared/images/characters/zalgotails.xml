@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="zalgotails.png">
+<SubTexture name="zalgotails idle0000" x="104" y="171" width="25" height="24" frameX="-64" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0001" x="129" y="171" width="26" height="24" frameX="-64" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0002" x="157" y="145" width="25" height="25" frameX="-65" frameY="-48" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0003" x="155" y="171" width="23" height="24" frameX="-67" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0004" x="176" y="106" width="22" height="24" frameX="-66" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0005" x="177" y="80" width="21" height="24" frameX="-66" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails left0000" x="55" y="46" width="32" height="28" frameX="-56" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails left0001" x="97" y="86" width="30" height="28" frameX="-57" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails left0002" x="68" y="117" width="26" height="27" frameX="-59" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails left0003" x="129" y="84" width="25" height="27" frameX="-59" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails up0000" x="90" y="38" width="24" height="30" frameX="-65" frameY="-43" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails up0001" x="129" y="0" width="25" height="28" frameX="-65" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails up0002" x="94" y="117" width="26" height="27" frameX="-66" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails up0003" x="120" y="117" width="26" height="27" frameX="-66" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails right0000" x="0" y="171" width="30" height="25" frameX="-67" frameY="-48" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails right0001" x="30" y="171" width="29" height="25" frameX="-67" frameY="-48" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails right0002" x="154" y="54" width="25" height="26" frameX="-67" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails right0003" x="154" y="80" width="23" height="26" frameX="-67" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails down0000" x="198" y="0" width="22" height="24" frameX="-62" frameY="-49" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails down0001" x="154" y="106" width="22" height="26" frameX="-61" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails down0002" x="129" y="28" width="20" height="28" frameX="-63" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails down0003" x="129" y="56" width="20" height="28" frameX="-63" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altleft0000" x="0" y="46" width="55" height="40" frameX="-33" frameY="-33" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altleft0001" x="0" y="86" width="51" height="31" frameX="-36" frameY="-42" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altleft0002" x="51" y="86" width="46" height="29" frameX="-39" frameY="-44" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altleft0003" x="154" y="0" width="44" height="27" frameX="-40" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altup0000" x="90" y="0" width="39" height="38" frameX="-50" frameY="-35" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altup0001" x="27" y="0" width="36" height="44" frameX="-54" frameY="-29" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altup0002" x="0" y="0" width="27" height="46" frameX="-65" frameY="-27" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altup0003" x="63" y="0" width="27" height="44" frameX="-66" frameY="-29" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altright0000" x="0" y="145" width="52" height="26" frameX="-45" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altright0001" x="59" y="171" width="45" height="25" frameX="-51" frameY="-48" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altright0002" x="52" y="145" width="38" height="26" frameX="-54" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altright0003" x="90" y="145" width="32" height="26" frameX="-58" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails idle0006" x="90" y="145" width="32" height="26" frameX="-58" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altdown0000" x="154" y="27" width="32" height="27" frameX="-52" frameY="-46" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altdown0001" x="122" y="145" width="35" height="26" frameX="-48" frameY="-47" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altdown0002" x="0" y="117" width="35" height="28" frameX="-48" frameY="-45" frameWidth="150" frameHeight="150" />
+<SubTexture name="zalgotails altdown0003" x="35" y="117" width="33" height="28" frameX="-50" frameY="-45" frameWidth="150" frameHeight="150" />
+</TextureAtlas>

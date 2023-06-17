@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="II_GF.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GFCHEER0000" x="0" y="0" width="644" height="566" frameX="-5" frameY="-14" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0001" x="0" y="0" width="644" height="566" frameX="-5" frameY="-14" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0002" x="644" y="0" width="644" height="570" frameX="-5" frameY="-10" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0003" x="1288" y="0" width="643" height="571" frameX="-6" frameY="-9" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0004" x="1288" y="0" width="643" height="571" frameX="-6" frameY="-9" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0005" x="1931" y="0" width="645" height="580" frameX="-4" frameY="0" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0006" x="1931" y="0" width="645" height="580" frameX="-4" frameY="0" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0007" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0008" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0009" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0010" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0011" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0012" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0013" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFCHEER0014" x="2576" y="0" width="649" height="576" frameX="0" frameY="-4" frameWidth="649" frameHeight="580"/>
+	<SubTexture name="GFIDLE0000" x="3225" y="0" width="652" height="572" frameX="0" frameY="-11" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0001" x="3225" y="0" width="652" height="572" frameX="0" frameY="-11" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0002" x="0" y="580" width="647" height="576" frameX="-3" frameY="-7" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0003" x="0" y="580" width="647" height="576" frameX="-3" frameY="-7" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0004" x="647" y="580" width="645" height="580" frameX="-3" frameY="-3" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0005" x="647" y="580" width="645" height="580" frameX="-3" frameY="-3" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0006" x="1292" y="580" width="644" height="582" frameX="-3" frameY="-1" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0007" x="1292" y="580" width="644" height="582" frameX="-3" frameY="-1" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0008" x="1936" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0009" x="1936" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0010" x="2580" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0011" x="2580" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0012" x="2580" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0013" x="2580" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFIDLE0014" x="2580" y="580" width="644" height="583" frameX="-3" frameY="0" frameWidth="652" frameHeight="583"/>
+	<SubTexture name="GFSAD0000" x="3224" y="580" width="654" height="572"/>
+	<SubTexture name="GFSAD0001" x="3224" y="580" width="654" height="572"/>
+	<SubTexture name="GFSAD0002" x="0" y="1163" width="653" height="572" frameX="-1" frameY="0" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0003" x="653" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0004" x="1306" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0005" x="1959" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0006" x="2612" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0007" x="3265" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0008" x="0" y="1735" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0009" x="653" y="1735" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0010" x="1306" y="1735" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0011" x="653" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0012" x="1306" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0013" x="1959" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSAD0014" x="2612" y="1163" width="653" height="571" frameX="-1" frameY="-1" frameWidth="654" frameHeight="572"/>
+	<SubTexture name="GFSCARED0000" x="1959" y="1735" width="625" height="586"/>
+	<SubTexture name="GFSCARED0001" x="1959" y="1735" width="625" height="586"/>
+	<SubTexture name="GFSCARED0002" x="2584" y="1735" width="625" height="584" frameX="0" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0003" x="3209" y="1735" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0004" x="0" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0005" x="0" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0006" x="624" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0007" x="3209" y="1735" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0008" x="3209" y="1735" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0009" x="0" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0010" x="0" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0011" x="624" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0012" x="3209" y="1735" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0013" x="3209" y="1735" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+	<SubTexture name="GFSCARED0014" x="0" y="2321" width="624" height="584" frameX="-1" frameY="-2" frameWidth="625" frameHeight="586"/>
+</TextureAtlas>

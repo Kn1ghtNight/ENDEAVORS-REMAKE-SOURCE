@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="zalgosonic.png">
+<SubTexture name="zalgosonic idle0000" x="165" y="67" width="23" height="32" frameX="-30" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic idle0001" x="177" y="133" width="23" height="31" frameX="-30" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic idle0002" x="165" y="99" width="23" height="32" frameX="-31" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic idle0003" x="135" y="98" width="23" height="32" frameX="-31" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic idle0004" x="0" y="133" width="23" height="32" frameX="-31" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic left0000" x="23" y="133" width="29" height="32" frameX="-20" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic left0001" x="52" y="133" width="29" height="32" frameX="-20" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic left0002" x="33" y="165" width="30" height="31" frameX="-19" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic left0003" x="63" y="165" width="30" height="31" frameX="-19" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic down0000" x="204" y="151" width="28" height="29" frameX="-24" frameY="-22" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic down0001" x="79" y="197" width="26" height="29" frameX="-25" frameY="-22" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic down0002" x="204" y="31" width="25" height="30" frameX="-25" frameY="-21" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic down0003" x="204" y="61" width="25" height="30" frameX="-25" frameY="-21" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic right0000" x="204" y="91" width="31" height="30" frameX="-25" frameY="-21" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic right0001" x="204" y="121" width="29" height="30" frameX="-27" frameY="-21" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic right0002" x="81" y="133" width="27" height="32" frameX="-27" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic right0003" x="108" y="133" width="28" height="32" frameX="-26" frameY="-19" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic up0000" x="0" y="98" width="32" height="35" frameX="-26" frameY="-16" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic up0001" x="32" y="98" width="34" height="34" frameX="-25" frameY="-17" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic up0002" x="66" y="98" width="34" height="34" frameX="-25" frameY="-17" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic up0003" x="100" y="98" width="35" height="34" frameX="-25" frameY="-17" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altleft0000" x="136" y="133" width="41" height="32" frameX="-4" frameY="-24" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altleft0001" x="0" y="165" width="33" height="32" frameX="-12" frameY="-24" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altleft0002" x="93" y="165" width="33" height="31" frameX="-13" frameY="-25" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altleft0003" x="126" y="165" width="32" height="31" frameX="-14" frameY="-25" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altleft0004" x="158" y="165" width="32" height="31" frameX="-14" frameY="-25" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altdown0000" x="105" y="197" width="36" height="29" frameX="-19" frameY="-27" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altdown0001" x="165" y="0" width="39" height="34" frameX="-16" frameY="-22" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altdown0002" x="123" y="0" width="42" height="40" frameX="-11" frameY="-16" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altdown0003" x="79" y="50" width="41" height="41" frameX="-12" frameY="-15" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altdown0004" x="123" y="40" width="41" height="40" frameX="-12" frameY="-16" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altup0000" x="0" y="0" width="45" height="50" frameX="-12" frameY="-6" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altup0001" x="35" y="50" width="44" height="46" frameX="-15" frameY="-10" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altup0002" x="45" y="0" width="40" height="48" frameX="-17" frameY="-8" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altup0003" x="85" y="0" width="38" height="48" frameX="-18" frameY="-8" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altup0004" x="0" y="50" width="35" height="48" frameX="-19" frameY="-8" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altright0000" x="141" y="197" width="33" height="29" frameX="-27" frameY="-27" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altright0001" x="204" y="0" width="35" height="31" frameX="-26" frameY="-25" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altright0002" x="165" y="34" width="37" height="33" frameX="-25" frameY="-23" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altright0003" x="0" y="197" width="40" height="31" frameX="-25" frameY="-25" frameWidth="80" frameHeight="80" />
+<SubTexture name="zalgosonic altright0004" x="40" y="197" width="39" height="30" frameX="-25" frameY="-26" frameWidth="80" frameHeight="80" />
+</TextureAtlas>
